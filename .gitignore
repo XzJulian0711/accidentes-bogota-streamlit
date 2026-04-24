@@ -23,3 +23,7 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+#diagnostico_geojson
+
+diagnostico_geojson.py
