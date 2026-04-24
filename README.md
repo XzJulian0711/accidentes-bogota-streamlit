@@ -19,7 +19,7 @@ Esta aplicación permite al usuario filtrar interactivamente por rango de años,
 - **Preprocesamiento aplicado:** renombrado de columnas, reemplazo de "Bogotá" por "Sin localidad específica" en la columna localidad, conversión de meses y días a variables categóricas ordenadas, creación de columna `tipo_dia` (entre semana / fin de semana), eliminación de columnas irrelevantes para el análisis.
 - **Mapa de calor, localidades de bogota:** Mapa interactivo de todas la localidades de Bogotá, hecho con TopoJson y D3
 - **URL orginal:** [Github@jupaneira](https://gist.github.com/jupaneira/a02af9ac03957aed15939ef72bfecfd2)
-- **Decripción:** El mapa de calor es obtenido de TopoJson de jupaneira y él lo convirtio en .shp, el archivo que el uso fue extraido de  (https://sites.google.com/site/seriescol/shapes) a GeoJSON, usando: ogr2ogr   -f GeoJSON -t_srs EPSG:4326  bta_localidades.json   localidades.shp y luego, con MapShaper, obtuve el archivo topoJSON con los atributos correspondientes.
+- **Decripción:** El mapa de calor es obtenido de TopoJson de jupaneira y él lo convirtio en .shp, el archivo que el uso fue extraido de  (https://gist.githubusercontent.com/jupaneira/a02af9ac03957aed15939ef72bfecfd2/raw/a75ede89adabff65c739268fb8d61137169b5691/bta_localidades.json) a GeoJSON, usando: ogr2ogr   -f GeoJSON -t_srs EPSG:4326  bta_localidades.json   localidades.shp y luego, con MapShaper, obtuve el archivo topoJSON con los atributos correspondientes.
 
 
 ##  Hallazgos principales
