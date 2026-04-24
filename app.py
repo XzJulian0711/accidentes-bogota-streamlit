@@ -13,7 +13,7 @@ from topojson import Topology
 # =============================================================
 st.set_page_config(
     page_title="Accidentes de Transporte - Bogotá",
-    page_icon="🚗",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -280,12 +280,11 @@ st.info(
 )
 
 st.markdown("---")
-
 # =============================================================
 # INSIGHT 3 — TIPOS DE ACCIDENTE (donut)
 # =============================================================
 
-st.subheader("🚗 Insight 3: Choque y atropello representan casi el 90% de los accidentes")
+st.subheader(" Insight 3: Choque y atropello representan casi el 90% de los accidentes")
 
 tipo_counts = df_filtrado['tipo_accidente'].value_counts().reset_index()
 tipo_counts.columns = ['tipo', 'total']
@@ -309,7 +308,7 @@ fig3.update_traces(textposition='inside', textinfo='percent+label')
 st.plotly_chart(fig3, use_container_width=True)
 
 st.info(
-    "💡 **Lectura:** Dos categorías dominan el panorama: choques entre vehículos y "
+    "**Lectura:** Dos categorías dominan el panorama: choques entre vehículos y "
     "atropellos de peatones. Esto indica que las políticas de prevención deben focalizarse "
     "principalmente en estas dos dinámicas de siniestro."
 )
@@ -320,7 +319,7 @@ st.markdown("---")
 # =============================================================
 # INSIGHT 4 — PIRÁMIDE POBLACIONAL (sexo + edad)
 # =============================================================
-st.subheader("🏛️ Insight 4: Hombres adultos (29-59 años) concentran la mayoría de víctimas")
+st.subheader("Insight 4: Hombres adultos (29-59 años) concentran la mayoría de víctimas")
 
 orden_ciclo = [
     '(0 a 5) Primera Infancia',
@@ -395,7 +394,7 @@ else:
     st.warning("No hay datos demográficos disponibles con los filtros actuales.")
 
 st.info(
-    "💡 **Lectura:** La pirámide poblacional muestra claramente dos patrones: "
+    "**Lectura:** La pirámide poblacional muestra claramente dos patrones: "
     "(1) una fuerte asimetría de género —los hombres representan alrededor del 70% de las víctimas—, "
     "y (2) una concentración muy marcada en la población económicamente activa (29-59 años), "
     "lo que sugiere patrones de exposición vinculados a movilidad laboral."
@@ -407,7 +406,7 @@ st.markdown("---")
 # =============================================================
 # INSIGHT 5 — LOLLIPOP CHART DE CAUSAS
 # =============================================================
-st.subheader("🍭 Insight 5: La desobediencia de señales es la principal causa identificada")
+st.subheader("Insight 5: La desobediencia de señales es la principal causa identificada")
 
 df_causas = df_filtrado[df_filtrado['circunstancia'] != 'Sin información'].copy()
 
@@ -464,7 +463,7 @@ else:
     st.warning("No hay causas identificadas con los filtros actuales.")
 
 st.info(
-    "💡 **Lectura:** Entre los casos con causa identificada, desobedecer señales de "
+    "**Lectura:** Entre los casos con causa identificada, desobedecer señales de "
     "tránsito lidera con gran diferencia, seguido por exceso de velocidad. Ambas son "
     "causas prevenibles vinculadas directamente al comportamiento de los conductores, "
     "lo que sugiere que campañas educativas y de control podrían tener un impacto sustancial."
@@ -476,7 +475,7 @@ st.markdown("---")
 # =============================================================
 # DATOS CRUDOS (expandible)
 # =============================================================
-with st.expander("📋 Ver datos crudos filtrados"):
+with st.expander("Ver datos crudos filtrados"):
     st.dataframe(df_filtrado, use_container_width=True)
     st.markdown(f"Mostrando **{len(df_filtrado):,}** registros")
 
