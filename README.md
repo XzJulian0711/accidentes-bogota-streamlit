@@ -38,13 +38,13 @@ Esta aplicación permite al usuario filtrar interactivamente por rango de años,
 
 1. **Evolución temporal (gráfico de área)** — Muestra la tendencia anual de accidentes con línea vertical marcando el inicio de la pandemia. Cubre el tipo "evolución temporal".
 
-2. **Barras horizontales por localidad (paleta secuencial)** — Compara las 19 localidades con codificación de color por intensidad. Cubre "comparaciones entre categorías".
+2. **Mapa de calor por localidad de Bogotá (paleta degradada)** — Compara las 20 localidades con codificación de color por intensidad. Cubre "comparaciones entre localidades de Bogotá".
 
 3. **Gráfico de dona de tipos de accidente (paleta cualitativa)** — Muestra la proporción de cada tipo con agrupación inteligente de categorías menores en "Otros". Cubre "composición o proporciones".
 
-4. **Perfil demográfico (dos paneles combinados)** — Dona de sexo y barras verticales de ciclo vital con paleta secuencial. Cubre "distribución de variables".
+4. **Grafico de piramide poblacional inversa (paleta divergente)** — muestra  barras horizontales bidireccional. Cubriendo la "distribución entre sexo y grupo etario".
 
-5. **Top causas (barras horizontales)** — Ranking de las 8 causas más frecuentes con codificación secuencial. Cubre "relaciones entre variables" (causa × frecuencia).
+5. **Top causas (lineas horizontales )** — Ranking de las 8 causas más frecuentes con codificación secuencial. Cubre "relaciones entre variables" (causa × frecuencia).
 
 Adicionalmente se incluyen **4 KPIs ejecutivos** (total de accidentes, año pico, localidad crítica, tipo predominante) y una **tabla expandible** con los datos crudos filtrados.
 
@@ -56,6 +56,7 @@ Adicionalmente se incluyen **4 KPIs ejecutivos** (total de accidentes, año pico
   - `pandas` — manipulación y análisis de datos
   - `plotly` — gráficos interactivos
   - `numpy` — operaciones numéricas
+  - `json` — GeoJson para mapa de calor 
 - **Control de versiones:** Git + GitHub
 - **Plataforma de despliegue:** Streamlit Community Cloud
 
