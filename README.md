@@ -4,7 +4,7 @@ Aplicación web interactiva para explorar y visualizar los patrones, hallazgos e
 
 ##  App desplegada
 
-👉 **[Ver aplicación en vivo](https://accidentes-bogota.streamlit.app)**
+ **[Ver aplicación en vivo](https://accidentes-bogota.streamlit.app)**
 
 ##  Descripción
 
