@@ -48,15 +48,16 @@ Esta aplicación permite al usuario filtrar interactivamente por rango de años,
 
 Adicionalmente se incluyen **4 KPIs ejecutivos** (total de accidentes, año pico, localidad crítica, tipo predominante) y una **tabla expandible** con los datos crudos filtrados.
 
-##  Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Framework:** Streamlit 1.x
 - **Lenguaje:** Python 3.13
 - **Bibliotecas principales:**
   - `pandas` — manipulación y análisis de datos
-  - `plotly` — gráficos interactivos
+  - `plotly` — gráficos interactivos (incluyendo mapa coroplético con Mapbox)
   - `numpy` — operaciones numéricas
-  - `json` — GeoJson para mapa de calor 
+  - `topojson` — conversión de TopoJSON a GeoJSON para el mapa de Bogotá
+- **Datos geográficos:** TopoJSON oficial de las 20 localidades de Bogotá
 - **Control de versiones:** Git + GitHub
 - **Plataforma de despliegue:** Streamlit Community Cloud
 
@@ -92,13 +93,17 @@ streamlit run app.py
 La aplicación se abrirá automáticamente en `http://localhost:8501`.
 
 ## Estructura del proyecto
+
+```
 accidentes-bogota-streamlit/
 ├── app.py                              # Aplicación Streamlit principal
 ├── requirements.txt                    # Dependencias del proyecto
 ├── README.md                           # Este archivo
 ├── .gitignore                          # Archivos a ignorar por Git
 └── data/
-└── accidentes_bogota_limpio.csv    # Dataset procesado
+    ├── accidentes_bogota_limpio.csv    # Dataset procesado
+    └── bogota_localidades.json         # TopoJSON de las 20 localidades
+```
 
 ## Principios de diseño aplicados
 
